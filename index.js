@@ -27,6 +27,11 @@ const connectedClient = await connectToMongoDB();
 const db = connectedClient.db("booknook");
 const user = db.collection();
 
+
+app.get("/",(req,res)=>{
+    res.send("api is coming");
+})
+
 app.listen(port, () => {
   console.log(`My app is listening on port ${port}`);
 });
